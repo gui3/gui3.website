@@ -1,0 +1,22 @@
+section {
+  -padding: 0 2em;
+}
+
+article {
+  padding: 2em;
+}
+
+.textCenter {
+  text-align: center;
+}
+.textRight {
+  text-align: right;
+}
+
+p.big {
+  -font-size: 1.2em;
+  font-family: monospace, sans-serif;
+}
+p.bigger {
+  -font-size: 1.4em;
+}

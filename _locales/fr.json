@@ -1,0 +1,15 @@
+{
+  "layout": {
+    "logo": "gui3's website",
+    "login": "Se connecter",
+    "logout": "Se déconnecter"
+  },
+  "home": {
+    "title": "Bonjour tout le monde!",
+    "intro": [
+      "Vous avez aterri sur la page personnelle de ",
+      "<a href=\"/about#me\">Guillaume Silvent</a> ",
+      "alias gui3, développeur 👨🏽‍💻 et musicien 🎼 amateur"
+    ]
+  }
+}

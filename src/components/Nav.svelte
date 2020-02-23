@@ -45,10 +45,15 @@
     text-decoration: none;
     padding: 1em 0.5em;
     display: block;
+    border-bottom: inherit;
+  }
+  a:hover {
+    outline: none;
+    border-bottom: inherit;
   }
 </style>
 
-<nav>
+<nav id="mainNav">
   <ul>
     <li><a class:selected='{segment === undefined}' href='.'>home</a></li>
     <li><a class:selected='{segment === "about"}' href='about'>about</a></li>

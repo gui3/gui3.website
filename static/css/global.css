@@ -8,8 +8,10 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
 	margin: 0 0 0.5em 0;
+	padding: 0 1em;
 	font-weight: 400;
 	line-height: 1.2;
+	font-family: monospace, sans-serif;
 }
 
 h1 {
@@ -18,9 +20,22 @@ h1 {
 
 a {
 	color: inherit;
+	text-decoration: none;
+	border-bottom: 3px dotted #d22;
+	font-weight: bold;
+}
+a:hover {
+	border-bottom: none;
+	outline: 3px solid #d22;
+  outline-offset: 0.2em;
+}
+a.external {
+  text-decoration: underline;
+  color: #d22;
+  border-bottom: none;
 }
 
-code {
+.code {
 	font-family: menlo, inconsolata, monospace;
 	font-size: calc(1em - 2px);
 	color: #555;

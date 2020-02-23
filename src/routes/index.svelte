@@ -1,46 +1,45 @@
+<script>
+  import Examples from '../components/Examples.svelte'
+</script>
+
 <style>
-  h1, figure, p {
-    text-align: center;
-    margin: 0 auto;
-  }
-
-  h1 {
-    font-size: 2.8em;
-    text-transform: uppercase;
-    font-weight: 700;
-    margin: 0 0 0.5em 0;
-  }
-
-  figure {
-    margin: 0 0 1em 0;
-  }
-
-  img {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 0 1em 0;
-  }
-
-  p {
-    margin: 1em auto;
-  }
-
   @media (min-width: 480px) {
     h1 {
-      font-size: 4em;
+      -font-size: 4em;
     }
   }
 </style>
 
-<svelte:head>
-  <title>Sapper project template</title>
-</svelte:head>
+<section id="presentation">
+  <article id="intro" class="white textCenter">
+    <h1>Hello people!</h1>
 
-<h1>Great success!</h1>
+    <p>
+      Vous êtes sur la page personnelle de
+      Guillaume Silvent alias
+      <a href="/about#me">gui3</a>,
+      développeur et musicien amateur
+    </p>
+  </article>
 
-<figure>
-  <img alt='Borat' src='great-success.png'>
-  <figcaption>HIGH FIVE!</figcaption>
-</figure>
+  <article id="catchup" class="coloured green textCenter">
+    <p class="big">
+      Vous souhaitez publier votre
+      <a href="/skills/websites">site web</a> ?
+    </p>
+    <p class="big">
+      ou alors un
+      <a href="/skills/programs">petit programme</a>
+      vous simplifierai la vie ?
+    </p>
+    <p class="big">
+      ou peut être êtes vous venus pour
+      <a href="/hire">me recruter</a> !
+    </p>
+    <p class="big bigger">
+      <a href="/contact">N'hésitez pas à me contacter !!</a>
+    </p>
+  </article>
+</section>
 
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
+<Examples/>

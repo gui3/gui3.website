@@ -1,0 +1,15 @@
+{
+  "layout": {
+    "logo": "gui3's website",
+    "login": "Log in",
+    "logout": "Log out"
+  },
+  "home": {
+    "title": "Hello people!",
+    "intro": [
+      "You came to the personal page of ",
+      "<a href=\"/about#me\">Guillaume Silvent</a> ",
+      "alias gui3, hobbyist developer 👨🏽‍💻 and musician 🎼"
+    ]
+  }
+}
