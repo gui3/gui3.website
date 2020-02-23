@@ -1,73 +1,39 @@
+<script>
+  import Logo from '../components/Logo.svelte'
+  import Toolbar from '../components/Toolbar.svelte'
+  import Nav from '../components/Nav.svelte'
+
+  export let segment
+
+  let vh
+  let y
+  let h
+  $: logoTransform = !segment ? Math.max(0, 1-3*y/vh) : 0
+
+</script>
+
 <style>
   header {
-    -position: fixed;
-  }
+    position: fixed;
+    z-index: 100;
+    background: #fff;
+    width: 100%;
 
-  img.logo {
-    width: 2.5em;
-    height: 2.5em;
-    -border-radius: 100%;
-    margin: 0.2em 0.5em;
-  }
-
-  a.logo {
-    border-bottom: none;
-  }
-
-  .flexRow {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    box-shadow: 0 3px 5px #aac;
+    box-shadow: 0 3px 5px rgba(100, 100, 200, 0.3);
   }
 </style>
 
-<header class="flexRow">
+<svelte:window bind:scrollY={y} bind:innerHeight={vh}/>
 
-  <div id="logoSection" class="flexRow">
-    <!--button
-    class="logo"
-    type="button"
-    name="button"
-    title="MENU"
-    onclick="toggleSidebar();">
-      <img
-      class="logo"
-      src="images/Escher's_Relativity.jpg"
-      alt="Escher's relativity">
-    </button -->
-    <img
-    class="logo"
-    src="images/logos/3/3.svg"
-    alt="logo">
-    <h3>
-      <a href="/#top">
-        gui3's website
-      </a>
-    </h3>
+<header bind:clientHeight={h}>
+  <Logo {logoTransform}/>
+
+  <div>
+    <Toolbar {vh}/>
+    <Nav {segment}/>
   </div>
-
-  <div id="toolsSection" class="flexRow">
-    <a
-    class="github-button logo"
-    href="https://github.com/gui3"
-    title="GitHub"
-    aria-label="GitHub">
-      <img
-      class="logo"
-      src="./images/logos/GitHub-Mark/PNG/GitHub-Mark-120px-plus.png"
-      alt="github logo">
-    </a>
-
-    <a
-    class="facebook-button logo"
-    href="https://www.facebook.com/guillaume.silvent"
-    title="Facebook"
-    aria-label="Facebook">
-      <img
-      class="logo"
-      src="./images/logos/Facebook_logo.svg"
-      alt="github logo">
-    </a>
-  </div>
-
 </header>
+
+<div style="height:{ y<h ? h+y : h+h}px">
+</div>

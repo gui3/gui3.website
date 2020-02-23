@@ -2,14 +2,16 @@
 </script>
 
 <script>
+  import Homescreen from '../components/Homescreen.svelte'
   import Header from '../components/Header.svelte'
-  import Nav from '../components/Nav.svelte'
 
   import { onMount } from 'svelte'
 
   $: titleBonus = segment ? ' - ' + segment : ''
 
   export let segment
+
+  $: yPos = segment ? 100 : 0
 </script>
 
 <style>
@@ -27,9 +29,8 @@
   </title>
 </svelte:head>
 
-<Header/>
-<Nav {segment}/>
-
 <main>
+  <Header {segment}/>
+
   <slot></slot>
 </main>

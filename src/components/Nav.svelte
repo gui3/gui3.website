@@ -1,5 +1,6 @@
 <script>
-  export let segment;
+  import { fade, slide } from 'svelte/transition'
+  export let segment
 </script>
 
 <style>
@@ -53,7 +54,7 @@
   }
 </style>
 
-<nav id="mainNav">
+<nav id="mainNav" transition:slide>
   <ul>
     <li><a class:selected='{segment === undefined}' href='.'>home</a></li>
     <li><a class:selected='{segment === "about"}' href='about'>about</a></li>

@@ -1,9 +1,19 @@
+html, body, main {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 section {
   -padding: 0 2em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 article {
   padding: 2em;
+  flex: 1;
 }
 
 .textCenter {
