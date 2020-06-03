@@ -4,6 +4,9 @@ import compression from 'compression'
 import * as sapper from '@sapper/server'
 import cookieSession from 'cookie-session'
 
+import logger from './utils/helpers/logger'
+
+import apiRouter from './api/routes/index'
 import fatal500 from './utils/middlewares/fatal500'
 
 const { PORT, NODE_ENV } = process.env
@@ -20,11 +23,7 @@ app.use(cookieSession({
 app.use(compression({ threshold: 0 }))
 app.use(sirv('static', { dev }))
 
-app.get('/api/error', (req, res, next) => {
-  const error = new Error('this is a voluntary error')
-  error.code = 'VOLUNTARY'
-  next(error)
-})
+app.use('/api', apiRouter)
 
 app.use(sapper.middleware({
   session: req => ({
@@ -35,5 +34,5 @@ app.use(sapper.middleware({
 app.use(fatal500)
 
 app.listen(PORT, err => {
-  if (err) console.log('error', err)
+  if (err) logger.error('error', err)
 })

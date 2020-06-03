@@ -6,7 +6,8 @@ export default function fatal500 (err, req, res, next) {
     res.status(500)
       .type('html')
       .send(
-        '<link rel="stylesheet" href="global.css">' +
+        '<link rel="stylesheet" href="/css/global.css">' +
+        '<link rel="stylesheet" href="/css/layout.css">' +
         '<h1>Oooops ... 500 server error</h1>' +
         '<p>It seems the server has encountered an error,<br/>' +
         '   try to <a href=\'/\'> return to the website</a><br/>' +

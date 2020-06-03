@@ -5,15 +5,15 @@ html, body, main {
 }
 
 section {
-  -padding: 0 2em;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  padding: 0 2em;
+  -display: flex;
+  -flex-wrap: wrap;
+  -justify-content: space-between;
 }
 
 article {
   padding: 2em;
-  flex: 1;
+  -flex: 1;
 }
 
 .textCenter {

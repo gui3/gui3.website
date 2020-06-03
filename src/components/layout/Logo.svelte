@@ -1,15 +1,15 @@
 <script>
-  export let logoTransform = 0
-  let vh
+  let y
 </script>
 
 <style>
   img {
-    max-width: 100%;
+    -max-width: 100%;
+    transition:height 1s ease;
   }
 </style>
 
-<svelte:window bind:innerHeight={vh}/>
+<svelte:window bind:scrollY={y}/>
 
 <!--button
 class="logo"
@@ -26,4 +26,4 @@ onclick="toggleSidebar();">
 class=""
 src="images/logos/3/3.svg"
 alt="logo"
-style="height:{vh*logoTransform}px">
+style="height:{ 40 }px">

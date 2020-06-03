@@ -1,7 +1,6 @@
 <script>
   let y
   let vh
-  export let pageHeight
 </script>
 
 <style>

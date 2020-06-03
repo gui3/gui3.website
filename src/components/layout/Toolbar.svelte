@@ -1,6 +1,20 @@
 <script>
-  export let logoTransform = 1
-  export let vh
+  import Logo from './Logo.svelte'
+  import Loading from '../Loading.svelte'
+
+  let locales
+  setTimeout(_=>{
+    locales = [
+      {
+        name: 'fr',
+        emoji: '🇫🇷'
+      },
+      {
+        name: 'en',
+        emoji: '🇬🇧'
+      }
+    ]
+  }, 5000)
 </script>
 
 <style>
@@ -24,13 +38,24 @@
 </style>
 
 <nav class="flexRow">
-
   <div id="brand" class="flexRow">
+    <Logo/>
     <h3>
       <a href="/#top">
         gui3's website
       </a>
     </h3>
+    {#if locales}
+      <select name="" id="">
+        {#each locales as locale}
+          <option>
+            {locale.emoji}
+          </option>
+        {/each}
+      </select>
+    {:else}
+      <Loading/>
+    {/if}
   </div>
 
   <div id="toolsSection" class="flexRow">
