@@ -1,6 +1,6 @@
 <script>
   import Logo from './Logo.svelte'
-  import Loading from '../Loading.svelte'
+  import Loading from '../shared/Loading.svelte'
 
   let locales
   setTimeout(_=>{

@@ -1,17 +1,46 @@
 <script>
+  export let block = true;
+  export let editable = false;
+  export let height = ''
+  export const theme = '';
+  export const language = '';
+
+  let style
+
+  // block/inline style -------------
+  if (block) {
+    style = `
+      padding: 0.3em 0.5em;
+      margin: 0;
+      overflow: auto;
+    `
+  } else {
+    style = `
+      display: inline;
+    `
+  }
+
+  if (height) {
+    style += 'height: '+height+';'
+  }
 </script>
 
 <svelte:head>
 </svelte:head>
 
 <style>
-  code {
+  .code {
     font-family: menlo, inconsolata, monospace;
     font-size: calc(1em - 2px);
     color: #f05;
+    background-color: #eee;
+    border: 1px solid #223;
+    border-radius: 2px;
   }
 </style>
 
-<code>
-  <slot/>
-</code>
+<pre class="code" {style} contenteditable={editable}>
+  <code>
+    <slot/>
+  </code>
+</pre>

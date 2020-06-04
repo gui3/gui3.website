@@ -1,5 +1,5 @@
 <script>
-  import Codeblock from '../components/shared/Codeblock.svelte'
+  import Code from '../components/shared/Code.svelte'
 
   export let status;
   export let error;
@@ -28,12 +28,12 @@
     <p>
       <a href="mailto:gui.silvent@gmail.com">->Contacter le webmaster</a>
     </p>
-
   </article>
+
   {#if error.stack} <!--dev $$ error.stack-->
     <article>
       <h3>Error Stack :</h3>
-      <Codeblock>{error.stack}</Codeblock>
+      <Code block={true}>{error.stack}</Code>
     </article>
   {/if}
 </section>

@@ -1,5 +1,6 @@
 <script>
   import Tictactoe from './examples/Tictactoe.svelte'
+  import FizzBuzz from './examples/FizzBuzz.svelte'
 </script>
 
 <section>
@@ -12,6 +13,11 @@
     </p>
 
     <Tictactoe/>
+
+    hello world
+    <hr/>
+
+    <FizzBuzz/>
 
   </article>
 </section>
