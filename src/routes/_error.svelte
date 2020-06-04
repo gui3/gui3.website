@@ -29,8 +29,6 @@
       <a href="mailto:gui.silvent@gmail.com">->Contacter le webmaster</a>
     </p>
 
-    <Codeblock>{error.message}</Codeblock>
-
   </article>
   {#if error.stack} <!--dev $$ error.stack-->
     <article>
