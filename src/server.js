@@ -11,6 +11,7 @@ import fatal500 from './utils/middlewares/fatal500'
 
 const { PORT, NODE_ENV } = process.env
 const dev = NODE_ENV === 'development'
+logger.info('NODE_ENV: ' + NODE_ENV)
 
 const app = express()
 
@@ -22,6 +23,13 @@ app.use(cookieSession({
 
 app.use(compression({ threshold: 0 }))
 app.use(sirv('static', { dev }))
+
+if (dev) {
+  app.use((req, res, next) => {
+    logger.debug('>req.url: ' + req.url)
+    next()
+  })
+}
 
 app.use('/api', apiRouter)
 

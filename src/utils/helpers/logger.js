@@ -1,5 +1,6 @@
 const logger = {
   verbose: console.log,
+  debug: console.log,
   info: console.log,
   error: console.error
 }
