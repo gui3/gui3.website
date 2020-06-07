@@ -1,39 +1,12 @@
 <script>
-  import ButtonAsLink from './ButtonAsLink.svelte'
+  export let ref
 
-  export let link
+  let linkEmbed = 'https://docs.google.com/document/d/' +
+    ref + '/pub?embedded=true'
 
-  function printDoc () {
-    fetch(link, {
-      method: 'GET',
-      mode: 'cors',
-      headers: new Headers({
-        'Content-Type': 'text/plain'
-      })
-    })
-    .then(response => {
-      if (response.status !== 200) {
-        console.log('Looks like there was a problem. Status Code: ' +
-          response.status);
-        return;
-      }
-      // Examine the text in the response
-      response.text()
-      .then(function(data) {
-        console.log(data)
-        var printWindow = window.open('', '', 'height=400,width=800')
-        printWindow.document.write('<html><head><title>Print</title>')
-        printWindow.document.write('</head><body >')
-        printWindow.document.write(data)
-        printWindow.document.write('</body></html>')
-        printWindow.document.close()
-        printWindow.print()
-      })
-    })
-    .catch(function(err) {
-      console.log('Fetch Error :-S', err);
-    })
-  }
+  let linkPdf = 'https://docs.google.com/document/d/' +
+    ref + '/export?format=pdf'
+
 </script>
 
 <style>
@@ -62,22 +35,24 @@
 </style>
 
 <article id="options">
-  <p>
-    cette page utilise un iframe,
-    l'affichage peut ne pas être optimal :
-  </p>
   <ul>
     <li>
-      <a href={link}>
-        voir le document en pleine page
+      <a href={linkPdf}>
+        🖨️ télécharger le document au format PDF
       </a>
     </li>
     <li>
-      <ButtonAsLink clickFunc={printDoc}>
-        télécharger le document en PDF
-      </ButtonAsLink>
+      <a href={linkEmbed}>
+        👀 voir le document en pleine page
+      </a>
     </li>
   </ul>
+  <p>
+    <em>
+      La visualisation suivante utilise un <strong>iframe</strong>,
+      l'affichage peut ne pas être optimal :
+    </em>
+  </p>
 </article>
 
 <div class="gDocContainer page">
@@ -86,6 +61,6 @@
   name="gDoc"
   class="gDoc"
   title="resume"
-  src={link}>
+  src={linkEmbed}>
   </iframe>
 </div>
