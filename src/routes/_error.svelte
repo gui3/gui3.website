@@ -1,5 +1,5 @@
 <script>
-  import Code from '../components/shared/Code.svelte'
+  import Code from '../components/elements/Code.svelte'
 
   export let status;
   export let error;

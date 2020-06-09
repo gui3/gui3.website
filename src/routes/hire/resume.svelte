@@ -1,5 +1,5 @@
 <script>
-  import GoogleDoc from '../../components/shared/GoogleDoc.svelte'
+  import GoogleDoc from '../../components/elements/GoogleDoc.svelte'
 
   //let link = 'https://docs.google.com/document/d/e/' +
   //  '2PACX-1vTCENk1Vk86jehVi57cWkoIOJAJ8OxogcdUYnGZFn86d7X8YZTvPqCjcRuwNP5pH7ykKOG4pMcgKwwM' +

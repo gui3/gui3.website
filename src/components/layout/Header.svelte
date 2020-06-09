@@ -3,15 +3,15 @@
   import Nav from './Nav.svelte'
 
   export let segment
-
-  let h
+  import { headerHeight } from '../globalStore.js'
 </script>
 
 <style>
   header {
-    position: fixed;
+    position: sticky;
+    top: 0;
     z-index: 100;
-    background: #fff;
+    background: inherit;
     width: 100%;
 
     box-shadow: 0 3px 5px #aac;
@@ -19,10 +19,7 @@
   }
 </style>
 
-<header bind:clientHeight={h}>
+<header bind:clientHeight={$headerHeight}>
   <Toolbar/>
   <Nav {segment}/>
 </header>
-
-<div style="height:{h}px">
-</div>

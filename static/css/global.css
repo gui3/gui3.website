@@ -1,13 +1,19 @@
 * {
-  box-sizing: border-box;
+  box-sizing: border-box !important;
+  background-color: inherit;
+  color: inherit;
+}
+html {
+  scroll-snap-type: y proximity;
 }
 
-body {
+html, body, main {
   margin: 0;
+  padding: 0;
+  width: 100%;
   font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-size: 14px;
   line-height: 1.5;
-  color: #333;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -23,19 +29,16 @@ h1 {
 }
 
 a, button.aslink {
-  color: inherit;
+  color: #d22;
   text-decoration: none;
-  border-bottom: 3px dotted #d22;
-  font-weight: bold;
 }
 a:hover, button.aslink:hover {
-  border-bottom: none;
+  color: inherit;
   outline: 3px solid #d22;
   outline-offset: 0.2em;
 }
 a.external {
   text-decoration: underline;
-  color: #d22;
   border-bottom: none;
 }
 

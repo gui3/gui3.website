@@ -1,5 +1,5 @@
 <script>
-  import Panel from '../components/Panel.svelte'
+  import Examples from '../../components/_draft.svelte'
 </script>
 
 <style>
@@ -10,7 +10,7 @@
   }
 </style>
 
-<Panel>
+<section id="presentation">
   <article id="intro" class="white textCenter">
     <h1>Hello people!</h1>
 
@@ -21,9 +21,7 @@
       développeur et musicien amateur
     </p>
   </article>
-</Panel>
 
-<Panel>
   <article id="catchup" class="coloured green textCenter">
     <p class="big">
       Vous souhaitez publier votre
@@ -42,8 +40,6 @@
       <a href="/contact">N'hésitez pas à me contacter !!</a>
     </p>
   </article>
-</Panel>
+</section>
 
-<Panel>
-  hello
-</Panel>
+<Examples/>

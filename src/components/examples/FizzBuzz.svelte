@@ -1,5 +1,5 @@
 <script>
-  import Repl from '../shared/Repl.svelte'
+  import Repl from '../elements/Repl.svelte'
 
   let input =
 `for (let i=0; i < 1000; i++) {
