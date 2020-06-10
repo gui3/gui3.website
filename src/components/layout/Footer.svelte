@@ -11,15 +11,18 @@
     position: absolute;
     width: 100%;
 
-    background: repeating-linear-gradient(
+    /*background: repeating-linear-gradient(
       -45deg,
       transparent,
-      transparent 0.2em,
-      #ccd 0.1em,
-      #ccd 0.3em);
+      transparent 0.6em,
+      rgba(150,150,150,0.2) 0.2em,
+      rgba(150,150,150,0.2) 0.8em);*/
+    background: linear-gradient(
+      180deg,
+      transparent,
+      #999);
 
-    color: #223;
-    text-shadow: 0 0 3px #eee;
+    color: #111;
     font-size: 0.8em;
     padding: 0.5em 1em;
 

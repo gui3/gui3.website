@@ -4,7 +4,7 @@ import compression from 'compression'
 import * as sapper from '@sapper/server'
 import cookieSession from 'cookie-session'
 
-import logger from './utils/helpers/logger'
+import logger from './utils/logger'
 
 import apiRouter from './api/routes/index'
 import fatal500 from './utils/middlewares/fatal500'

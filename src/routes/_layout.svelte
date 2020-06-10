@@ -20,7 +20,6 @@
   export let segment
   let vh
   $: pageHeight.set(vh - $headerHeight)
-  $: console.log($pageHeight)
 
 </script>
 

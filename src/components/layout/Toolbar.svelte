@@ -1,34 +1,11 @@
 <script>
   import Logo from './Logo.svelte'
-  import Loading from '../elements/Loading.svelte'
+  import LangSelect from '../tools/LangSelect.svelte'
+  import ThemeSelect from '../tools/ThemeSelect.svelte'
 
-  let locales
-  setTimeout(_=>{
-    locales = [
-      {
-        name: 'fr',
-        emoji: '🇫🇷'
-      },
-      {
-        name: 'en',
-        emoji: '🇬🇧'
-      }
-    ]
-  }, 5000)
 </script>
 
 <style>
-  img.logo {
-    width: 2.5em;
-    height: 2.5em;
-    -border-radius: 100%;
-    margin: 0.2em 0.5em;
-  }
-
-  a.logo {
-    border-bottom: none;
-  }
-
   .flexRow {
     display: flex;
     justify-content: space-between;
@@ -40,25 +17,20 @@
 <nav class="flexRow">
   <div id="brand" class="flexRow">
     <Logo/>
+
     <h3>
       <a href="/#top">
         gui3's website
       </a>
     </h3>
-    {#if locales}
-      <select name="" id="">
-        {#each locales as locale}
-          <option>
-            {locale.emoji}
-          </option>
-        {/each}
-      </select>
-    {:else}
-      <Loading/>
-    {/if}
+
+    <LangSelect/>
+  </div>
+  <div>
+    <ThemeSelect/>
   </div>
 
-  <div id="toolsSection" class="flexRow">
+  <!--div id="toolsSection" class="flexRow">
     <a
     class="github-button logo"
     href="https://github.com/gui3"
@@ -80,5 +52,5 @@
       src="./images/logos/Facebook_logo.svg"
       alt="github logo">
     </a>
-  </div>
+  </div-->
 </nav>

@@ -10,7 +10,7 @@
     min-height: 100vh;
     padding: 2em;
 
-    border: 1px solid blue;
+    -border: 1px solid blue;
   }
 </style>
 

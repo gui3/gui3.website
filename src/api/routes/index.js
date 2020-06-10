@@ -1,6 +1,7 @@
-import logger from '../../utils/helpers/logger'
+import logger from '../../utils/logger'
 
 import error from './error'
+//import locales from './locales'
 
 const { Router } = require('express')
 const apiRouter = Router()
@@ -15,6 +16,7 @@ apiRouter.use(function timeLog (req, res, next) {
 })
 
 apiRouter.get('/error', error)
+//apiRouter.get('/locales', locales)
 
 // subdomains ===================================================
 /*
