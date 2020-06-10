@@ -1,6 +1,6 @@
 <script>
   import Logo from './Logo.svelte'
-  import LangSelect from '../tools/LangSelect.svelte'
+  //import LangSelect from '../tools/LangSelect.svelte'
   import ThemeSelect from '../tools/ThemeSelect.svelte'
 
 </script>
@@ -24,7 +24,7 @@
       </a>
     </h3>
 
-    <LangSelect/>
+    <!--LangSelect/-->
   </div>
   <div>
     <ThemeSelect/>
