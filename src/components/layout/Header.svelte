@@ -14,8 +14,8 @@
     background: inherit;
     width: 100%;
 
-    box-shadow: 0 3px 5px #aac;
-    box-shadow: 0 3px 5px rgba(100, 100, 200, 0.3);
+    box-shadow: 0 5px 5px #aaa;
+    box-shadow: 0 5px 5px rgba(100, 100, 100, 0.3);
   }
 </style>
 

@@ -1,10 +1,14 @@
 <script>
   import Code from '../components/elements/Code.svelte'
+  import Panel from '../components/Panel.svelte'
+  import Article from '../components/Article.svelte'
 
-  export let status;
-  export let error;
+  import { theme } from '../components/globalStore.js'
 
-  const dev = process.env.NODE_ENV === 'development';
+  export let status
+  export let error
+
+  // const dev = process.env.NODE_ENV === 'development';
 </script>
 
 <style>
@@ -17,23 +21,27 @@
 
 <svelte:head>
   <title>gui3's - {status}</title>
+  <link
+  id="theme"
+  rel='stylesheet'
+  href='css/themes/{$theme}.css'/>
 </svelte:head>
 
 <section>
-  <article>
-    <h1>Ooops ... {status}</h1>
+  <Article>
+    <h1>⚡⚡ Error {status}</h1>
 
     <p>{error.message}</p>
 
     <p>
       <a href="mailto:gui.silvent@gmail.com">->Contacter le webmaster</a>
     </p>
-  </article>
+  </Article>
 
   {#if error.stack} <!--dev $$ error.stack-->
-    <article>
+    <Article>
       <h3>Error Stack :</h3>
       <Code block={true}>{error.stack}</Code>
-    </article>
+    </Article>
   {/if}
 </section>

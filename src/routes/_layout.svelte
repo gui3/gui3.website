@@ -37,7 +37,7 @@
   <link
   id="theme"
   rel='stylesheet'
-  href='css/themes/{$theme}.css'>
+  href='css/themes/{$theme}.css'/>
 </svelte:head>
 
 <svelte:window bind:innerHeight={vh}/>

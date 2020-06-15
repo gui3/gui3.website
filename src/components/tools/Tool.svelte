@@ -1,18 +1,20 @@
 <script>
   export let icon = null
+  export let action = null
 </script>
 
 <style>
-  span {
-    margin: 0.5em 1em;
+  button {
+    -width: 50px;
+    -height: 50px;
   }
 </style>
 
-<span>
+<button on:click={action} class="front">
   {#if icon}
     <label>
       {icon}
     </label>
   {/if}
   <slot/>
-</span>
+</button>

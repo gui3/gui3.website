@@ -4,7 +4,7 @@ let pageHeight = writable(500)
 let headerHeight = writable(100)
 let footerHeight = writable(100)
 
-let theme = writable('white')
+let theme = writable('light')
 
 export {
   headerHeight,

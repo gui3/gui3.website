@@ -4,24 +4,39 @@
 
   import { theme } from '../globalStore.js'
 
-  let themes = [
-    'white',
-    'dark'
-  ]
+  const themes = [{
+      name: 'light',
+      icon: '☀',
+      css: 'light'
+    }, {
+      name: 'dark',
+      icon: '🌛',
+      css: 'dark'
+    }]
+
+  let currentTheme
+  $: currentTheme = themes.filter(t => t.css === $theme)[0]
+
+  function toggleDarkTheme () {
+    const otherThemes = themes.filter(t => t.css !== $theme)
+    theme.set(
+      otherThemes[0].css
+    )
+  }
 </script>
 
 <style>
+  i {
+    font-style: normal;
+    font-size: 3em;
+  }
 </style>
 
-<Tool icon={'🎨'}>
-  {#if $theme && themes}
-    <select name="theme" id="theme" bind:value={$theme}>
-      {#each themes as t}
-        <option value={t}>
-          {t}
-        </option>
-      {/each}
-    </select>
+<Tool icon={themes[$theme]} action={toggleDarkTheme}>
+  {#if currentTheme}
+    <i>
+      {currentTheme.icon}
+    </i>
   {:else}
     <Loading/>
   {/if}

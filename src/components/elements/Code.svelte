@@ -12,7 +12,6 @@
     style = `
       padding: 0.3em 0.5em;
       margin: 0;
-      overflow: auto;
     `
   } else {
     style = `
@@ -36,6 +35,7 @@
     background-color: #eee;
     border: 1px solid #223;
     border-radius: 2px;
+    overflow: auto;
   }
 </style>
 

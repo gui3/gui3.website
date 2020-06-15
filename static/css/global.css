@@ -28,18 +28,8 @@ h1 {
   font-size: 2em;
 }
 
-a, button.aslink {
-  color: #d22;
-  text-decoration: none;
-}
-a:hover, button.aslink:hover {
-  color: inherit;
-  outline: 3px solid #d22;
-  outline-offset: 0.2em;
-}
-a.external {
-  text-decoration: underline;
-  border-bottom: none;
+section {
+  padding: 2em;
 }
 
 @media (min-width: 400px) {
