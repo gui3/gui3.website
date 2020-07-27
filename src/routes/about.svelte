@@ -1,6 +1,6 @@
 <script>
-  import Panel from '../components/Panel.svelte'
-  import Article from '../components/Article.svelte'
+  import Panel from '../components/elements/Panel.svelte'
+  import Article from '../components/elements/Article.svelte'
 </script>
 
 <Panel>
@@ -13,7 +13,7 @@
   <Article image={'images/logos/Svelte.png'} alt={'logo Svelte'}>
     <h2>Svelte + Sapper</h2>
     <p>
-      bla bla bla
+      
     </p>
   </Article>
 </Panel>

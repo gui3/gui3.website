@@ -1,5 +1,7 @@
 <script>
-  import Panel from '../components/Panel.svelte'
+  import Panel from '../components/elements/Panel.svelte'
+  import Image from '../components/elements/Image.svelte'
+  import Tictactoe from '../components/examples/Tictactoe.svelte'
 </script>
 
 <style>
@@ -21,29 +23,17 @@
       développeur et musicien amateur
     </p>
   </article>
-</Panel>
 
-<Panel>
-  <article id="catchup" class="coloured green textCenter">
-    <p class="big">
-      Vous souhaitez publier votre
-      <a href="/skills/websites">site web</a> ?
+  <article id="catchup" class="">
+    <p class="red">
+      Si vous êtes ici, c'est sûrement que vous avez eu accès à mon CV.
+      Je me dois de m'excuser, le site n'est pas encore prêt...
+      Pour le moment, il contient juste un <a href="/hire/resume">lien vers mon CV</a>.
     </p>
-    <p class="big">
-      ou alors un
-      <a href="/skills/programs">petit programme</a>
-      vous simplifierai la vie ?
-    </p>
-    <p class="big">
-      ou peut être êtes vous venus pour
-      <a href="/hire">me recruter</a> !
-    </p>
-    <p class="big bigger">
-      <a href="/contact">N'hésitez pas à me contacter !!</a>
+    <p>
+      En attendant la suite, voici un petit jeu avec une IA écrite en javascript.
+      Retrouvez en le code <a href="https://github.com/gui3/gui3.website/blob/master/src/components/examples/Tictactoe.js">ICI</a>.
     </p>
   </article>
-</Panel>
-
-<Panel>
-  hello
+  <Tictactoe/>
 </Panel>

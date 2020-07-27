@@ -9,8 +9,8 @@ a, button.aslink {
   background-image: linear-gradient(
     transparent 0%,
     transparent 50%,
-    rgba(255, 200, 20, 0.75) 50%,
-    rgba(255, 200, 20, 0.75) 100%);
+    rgba(255, 220, 20, 0.75) 50%,
+    rgba(255, 220, 20, 0.75) 100%);
 }
 a:hover, button.aslink:hover {
   background: #fc0;

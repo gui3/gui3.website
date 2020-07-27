@@ -41,17 +41,7 @@
 <footer bind:clientHeight={$footerHeight}>
   <ul>
     <li>
-      Site réalisé grâce à :
-    </li>
-    <li>
-      <a href="https://svelte.com">
-
-      </a>
-    </li>
-    <li>
-      <a href="https://nodejs.com">
-
-      </a>
+      
     </li>
   </ul>
 

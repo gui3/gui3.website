@@ -1,7 +1,7 @@
 <script>
   import Code from '../components/elements/Code.svelte'
-  import Panel from '../components/Panel.svelte'
-  import Article from '../components/Article.svelte'
+  import Panel from '../components/elements/Panel.svelte'
+  import Article from '../components/elements/Article.svelte'
 
   import { theme } from '../components/globalStore.js'
 

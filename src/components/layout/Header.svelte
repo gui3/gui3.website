@@ -21,5 +21,5 @@
 
 <header bind:clientHeight={$headerHeight}>
   <Toolbar/>
-  <Nav {segment}/>
+  <!--Nav {segment}/-->
 </header>

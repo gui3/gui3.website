@@ -1,5 +1,5 @@
 <script>
-  import { pageHeight, headerHeight } from './globalStore.js'
+  import { pageHeight, headerHeight } from '../globalStore.js'
 </script>
 
 <style>
