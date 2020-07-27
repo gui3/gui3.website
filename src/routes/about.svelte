@@ -96,9 +96,9 @@
       Forestier de formation,
       j'ai baigné dans la cartographie depuis mes débuts
       (
-        <a href="https://qgis.com">Qgis</a>,
-        <a href="https://arcgis.com">Arcgis</a>,
-        <a href="https://oxygis.com">Oxygis</a>
+        <a href="https://qgis.org">Qgis</a>,
+        <a href="https://esrifrance.fr">Arcgis</a>,
+        <a href="https://oxygis.eu">Oxygis</a>
         ...
       )
       <br/>
