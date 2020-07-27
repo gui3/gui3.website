@@ -4,8 +4,8 @@
 
 <style>
   section {
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
+    -scroll-snap-align: start;
+    -scroll-snap-stop: always;
 
     min-height: 100vh;
     padding: 2em;

@@ -4,8 +4,8 @@
 
 <style>
   footer {
-    scroll-snap-align: end;
-    scroll-snap-stop: always;
+    -scroll-snap-align: end;
+    -scroll-snap-stop: always;
 
     bottom: 0;
     position: absolute;
@@ -41,7 +41,7 @@
 <footer bind:clientHeight={$footerHeight}>
   <ul>
     <li>
-      
+
     </li>
   </ul>
 
