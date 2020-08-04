@@ -2,7 +2,7 @@
   import Toolbar from './Toolbar.svelte'
   import Nav from './Nav.svelte'
 
-  export let segment
+  // export let segment
   import { headerHeight } from '../globalStore.js'
 </script>
 

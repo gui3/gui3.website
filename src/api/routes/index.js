@@ -1,7 +1,8 @@
 import logger from '../../utils/logger'
 
 import error from './error'
-//import locales from './locales'
+// import locales from './locales'
+import personalRouter from './personal/index'
 
 const { Router } = require('express')
 const apiRouter = Router()
@@ -15,8 +16,15 @@ apiRouter.use(function timeLog (req, res, next) {
   next()
 })
 
-apiRouter.get('/error', error)
-//apiRouter.get('/locales', locales)
+apiRouter.get('/', (req, res) => {
+  res.status(200)
+    .json({
+      description: 'access from here to all shared data of my website'
+    })
+})
+apiRouter.use('/error', error)
+// apiRouter.get('/locales', locales)
+apiRouter.use('/personal', personalRouter)
 
 // subdomains ===================================================
 /*

@@ -15,6 +15,8 @@ logger.info('NODE_ENV: ' + NODE_ENV)
 
 const app = express()
 
+app.set('json spaces', 2)
+
 app.set('trust proxy', 1)
 app.use(cookieSession({
   name: 'session',
@@ -31,7 +33,7 @@ if (dev) {
   })
 }
 
-app.use('/api', apiRouter)
+app.use('/api', apiRouter) // bypass sapper for api calls
 
 app.use(sapper.middleware({
   session: req => ({
