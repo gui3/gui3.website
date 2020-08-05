@@ -17,31 +17,32 @@ function dataLoaderAsync (arg1, arg2) {
   })
 }
 
-const loader = multiMemoize(dataLoaderAsync, 60*60*1000)
+const loader = multiMemoize(dataLoaderAsync, 60 * 60 * 1000)
 
 function test (text) {
-  const result = loader('hello', 'world')
+  const result = loader.get('hello', 'world')
   console.log(text + JSON.stringify(result))
   result.then(data => console.log(text + ':result:' + data))
     .catch(err => { throw err })
-
 }
+
 test('1:')
 test('2:')
 test('3:')
+loader.clean()
 test('4:')
 
-setTimeout(_=> {
+setTimeout(_ => {
   test('5 +1000:')
-},1000)
+}, 1000)
 
-setTimeout(_=> {
+setTimeout(_ => {
   test('5 +6000:')
-},6000)
+}, 6000)
 
-setTimeout(_=> {
+setTimeout(_ => {
   test('5 +6500:')
-},6500)
+}, 6500)
 
 /*
 loader.get('hello', 'world')

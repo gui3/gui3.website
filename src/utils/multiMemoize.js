@@ -1,7 +1,7 @@
 function multiMemoize (func, ttl = 60 * 60 * 1000) {
   const cache = new Map()
 
-  function run (...args) {
+  function get (...args) {
     const key = JSON.stringify(args)
     const cached = cache.get(key)
     if (cached !== undefined && (ttl === 0 || cached.date + ttl > Date.now())) {
@@ -15,7 +15,20 @@ function multiMemoize (func, ttl = 60 * 60 * 1000) {
       return value.result
     }
   }
-  return run
+
+  function clean () {
+    const t0 = Date.now()
+    cache.forEach((v, k) => {
+      if (v.date + ttl < t0) {
+        cache.delete(k)
+      }
+    })
+  }
+
+  return {
+    get,
+    clean
+  }
 }
 
 export default multiMemoize
